@@ -239,6 +239,54 @@ p { margin: 0; }
 .placeholder-media--sm { aspect-ratio: 4 / 3; }
 
 /* ==========================================================================
+   Featured specialty band (water heaters)
+   ========================================================================== */
+.featured-service {
+  padding: 56px 0;
+  background: var(--blue-050);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.featured-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 48px;
+  align-items: center;
+}
+.featured-copy h2 {
+  font-size: clamp(24px, 2.8vw, 30px);
+  font-weight: 800;
+  margin-bottom: 14px;
+  max-width: 20ch;
+}
+.featured-copy > p {
+  color: var(--ink-70);
+  font-size: 15.5px;
+  line-height: 1.65;
+  margin-bottom: 8px;
+}
+.featured-copy .check-list { margin-top: 18px; margin-bottom: 26px; }
+
+/* Specialty badge on the matching services card */
+.service-card--specialty {
+  position: relative;
+  border-color: var(--blue-600);
+  box-shadow: 0 0 0 1px var(--blue-600), var(--shadow-sm);
+}
+.specialty-badge {
+  position: absolute;
+  top: -11px; left: 20px;
+  background: var(--blue-700);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+/* ==========================================================================
    Section shell
    ========================================================================== */
 .section { padding: 84px 0; }
@@ -423,6 +471,9 @@ p { margin: 0; }
 
   .split-grid { grid-template-columns: 1fr; gap: 32px; }
   .split-media { order: -1; }
+
+  .featured-grid { grid-template-columns: 1fr; gap: 28px; }
+  .featured-media { order: -1; }
 
   body { padding-bottom: 64px; }
   .mobile-call-bar { display: flex; }
